@@ -34,6 +34,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
     Route::view('profile', 'profile')
         ->name('profile');
+
+    Route::get('/imprimir', [App\Http\Controllers\GeneradorController::class, 'imprimir'])->name('imprimir');
 });
 
 require __DIR__.'/auth.php';
